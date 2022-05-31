@@ -14,7 +14,10 @@ dependencies {
 //  implementation 'org.example:example-api:1.0.0'
     // 👆 Comment out the release version
     // 👇 Use the snapshot version from Maven local repository
-    implementation 'org.example:example-api:1.0.1-SNAPSHOT'
+//  implementation 'org.example:example-api:1.0.1-SNAPSHOT'
+
+    // ☺️ With includeBuild and dependencySubstitution, we could just use the release version directly
+    implementation 'org.example:example-api:1.0.1' // 👈 Declare the expected "release" version
 
     testImplementation platform('org.junit:junit-bom:5.8.2')
     testImplementation 'org.junit.jupiter:junit-jupiter'

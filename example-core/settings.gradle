@@ -1,1 +1,8 @@
 rootProject.name = 'example-core'
+
+// substitute any dependency on org.example:example-api with a dependency on the root project of "example-api"
+includeBuild('../example-api') {
+    dependencySubstitution {
+        substitute module('org.example:example-api') using project(':')
+    }
+}
