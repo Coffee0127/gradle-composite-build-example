@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0.0-SNAPSHOT'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+//  implementation 'org.example:example-api:1.0.0'
+    // 👆 Comment out the release version
+    // 👇 Use the snapshot version from Maven local repository
+    implementation 'org.example:example-api:1.0.1-SNAPSHOT'
+
+    testImplementation platform('org.junit:junit-bom:5.8.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}

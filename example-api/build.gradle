@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+}
+
+group 'org.example'
+version '1.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+publishing {
+    publications {
+        // Run Gradle task `publishToMavenLocal` to publish artifact into local Maven repository
+        maven(MavenPublication) {
+            from components.java
+        }
+    }
+}
